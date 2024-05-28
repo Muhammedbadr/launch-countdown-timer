@@ -1,0 +1,116 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: inherit;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px
+
+}
+
+.contaner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(234, 17%, 12%);
+    color: white;
+    background-image: url("/images/bg-stars.svg");
+background-size:cover ;
+}
+
+.title_time{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column  ;
+}
+.soshirl_mida{
+    height: 30%;
+    background-image: url("/images/pattern-hills.svg");
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.title{
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.time{
+
+   display: flex;
+   gap:25px;
+   text-align: center;
+   width: 100%;
+   flex-wrap: wrap;
+   
+}
+.time > div{
+    display: flex;
+    flex-direction: column;
+text-align:center;
+}
+.time > div .box{
+    background: linear-gradient(hwb(235 15% 81%)50%,hsl(237, 21%, 20%)50%);
+    font-size: 50px;
+    color: hsl(345, 95%, 68%);
+    border-radius: 5px;
+    font-weight: bold;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 44;
+    transition: all 0.2s ease-in;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.time > div .box::after{
+    position: absolute;
+    content: "";
+    width: 8%;
+    height: 10%;
+    background-color: hsl(234, 17%, 12%);
+    left: 0;
+    top: 44%;
+    border-radius: 0 50% 50% 0;
+}
+.time > div .box::before{
+    position: absolute;
+    content: "";
+    width: 8%;
+    height: 10%;
+    background-color: hsl(234, 17%, 12%);
+    right: 0;
+    top: 44%;
+    border-radius: 50% 0 0 50% ;
+}
+.time > div .unit{
+    letter-spacing: 3px;
+    color: hsl(237, 18%, 59%);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.soshirl_mida >svg{
+    margin-bottom: -30px;
+    cursor: pointer;
+}
+.soshirl_mida > svg:hover path{
+    fill: hsl(345, 95%, 68%); /* Use fill for the SVG color */
+    transition: all 0.2s ease-out;
+}
